@@ -3,7 +3,7 @@
 # that have at least the given length. The length argument should be optional; if no length
 # is passed in, then 5 should be used as the length.
 def filter_lengths(strings, length = 5)
-  strings.map { |ele| ele if ele.length >= length }
+  strings.select { |ele| ele.length >= length }
 end
 
 p filter_lengths(["pear", "dragonfruit", "fig", "clementine"], 4)   # => ["pear", "dragonfruit", "clementine"]
