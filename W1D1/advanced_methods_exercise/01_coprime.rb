@@ -5,7 +5,7 @@
 
 def coprime?(num_1, num_2)
   (2...num_1).each do |i|
-    return false if num_1 % i == 0 || num_2 % i == 0
+    return false if num_1 % i == 0 && num_2 % i == 0
   end
   true
 end
