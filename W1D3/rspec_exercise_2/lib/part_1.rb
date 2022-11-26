@@ -25,12 +25,21 @@ def censor(sentence, curse_words)
   new_sen = []
   vowels = "aeiouAEIOU"
   sentence.split(" ").each do |word|
-    if curse_words.include?(word)
-      word.each_char.with_index { |char| word[i] = "*" if vowels.include?(char) }
+    if curse_words.include?(word.downcase)
+      word.each_char.with_index { |char, i| word[i] = "*" if vowels.include?(char) }
       new_sen << word
     else
       new_sen << word
     end
   end
-  new_sen
+  new_sen.join(" ")
+end
+
+def power_of_two?(n)
+  result = 2
+  while result < n
+    return true if result == n
+    result *= 2
+  end
+  false
 end
