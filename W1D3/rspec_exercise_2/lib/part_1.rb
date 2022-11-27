@@ -37,9 +37,12 @@ end
 
 def power_of_two?(n)
   result = 2
-  while result < n
-    return true if result == n
+  return true if n == 1
+
+  while n > result
     result *= 2
+    return true if result == n
   end
+
   false
 end
