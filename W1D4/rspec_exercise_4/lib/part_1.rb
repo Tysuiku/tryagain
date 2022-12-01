@@ -14,3 +14,7 @@ end
 def xor_select(arr, prc1, prc2)
   arr.select { |ele| ele if prc1.call(ele) || prc2.call(ele) && !(prc1.call(ele) && prc2.call(ele)) }
 end
+
+def
+
+end
