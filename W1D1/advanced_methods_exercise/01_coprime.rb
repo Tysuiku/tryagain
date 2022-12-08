@@ -3,6 +3,10 @@
 # The method should return false otherwise. For example coprime?(25, 12) is true because
 # 1 is the only number that divides both 25 and 12.
 
+def coprime?(n1, n2)
+  (2...n1).each { |i| return false if n1 % i == 0 && n2 % i == 0 }
+  true
+end
 
 p coprime?(25, 12)    # => true
 p coprime?(7, 11)     # => true
