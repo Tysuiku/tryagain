@@ -326,4 +326,3 @@ p picky_procipher('STOP that taxi!',
     is_yelled => reverse,
     contains_a => make_question
 ) # "STOP:) that??? !ixat"
-† pun intended
