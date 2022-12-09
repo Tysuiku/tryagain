@@ -10,6 +10,7 @@
 # to be the same before and after calling your method.
 
 def my_rotate!(array, amt)
+  I D K
 end
 
 array_1 = ["a", "b", "c", "d"]
