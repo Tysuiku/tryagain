@@ -10,7 +10,7 @@
 # to be the same before and after calling your method.
 
 def my_rotate!(array, amt)
-  what changed XD
+  testing to see if home setup works
 end
 
 array_1 = ["a", "b", "c", "d"]
