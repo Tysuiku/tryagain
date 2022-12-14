@@ -10,7 +10,18 @@
 # to be the same before and after calling your method.
 
 def my_rotate!(array, amt)
-  testing git for linux setup 
+  if amt > 0
+    amt.times do
+      el = array.shift
+      array << el
+    end
+  else
+    (-amt).times do
+      el = array.pop
+      array.unshift(el)
+    end
+  end
+  array
 end
 
 array_1 = ["a", "b", "c", "d"]
