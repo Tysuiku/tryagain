@@ -5,7 +5,7 @@
 
 def coprime?(n1, n2)
   (2...n1).each { |i| return false if n1 % i == 0 && n2 % i == 0 }
-  true
+  true 
 end
 
 p coprime?(25, 12)    # => true
