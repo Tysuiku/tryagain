@@ -3,4 +3,13 @@ def all_words_capitalized?(words)
 end
 
 def no_valid_url?(urls)
+  valid_ends = [".com", ".net", ".io", ".org"]
+
+  urls.none? do |url|
+    valid_ends.any? { |ends| url.include?(ends) }
+  end
+end
+
+def any_passing_students?(students)
+  students.any? { |student| student[:grades].sum / student[:grades].length >= 75 }
 end
