@@ -5,5 +5,14 @@ def is_prime?(n)
 end
 
 def nth_prime(n)
-    while 
+  i = 1
+  count = 0
+  while count < n
+    i += 1
+    if is_prime?(i)
+      count += 1
+    end
+  end
+
+  i
 end
