@@ -34,4 +34,7 @@ def maximum(arr, &block)
 end
 
 def my_group_by(arr, &block)
+  hash = Hash.new(0)
+  arr.each { |i| hash[block.call(i)] << i }
+  hash
 end
