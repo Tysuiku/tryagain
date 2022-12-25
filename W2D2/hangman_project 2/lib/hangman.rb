@@ -75,3 +75,5 @@ class Hangman
       false
     end
 end
+
+#break day
