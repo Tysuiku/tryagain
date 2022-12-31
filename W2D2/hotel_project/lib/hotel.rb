@@ -25,15 +25,19 @@ class Hotel
       return p "sorry, room does not exist"
     end
 
-    if @rooms[room_name].add_occupant(person)
-      p "check in successfull"
+    success = @rooms[room_name].add_occupant(person)
+    if success
+      p "check in successful"
     else
       p "sorry, room is full"
     end
   end
 
-  def 
+  def has_vacancy?
+    @rooms.values.any? { |room| !room.full? }
+  end
 
+  def list_rooms
+    @rooms.each { |name, room| puts "#{name}: #{room.available_space}" }
   end
 end
-#break for 1 more day
