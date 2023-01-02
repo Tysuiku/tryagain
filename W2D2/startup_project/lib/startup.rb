@@ -19,5 +19,22 @@ class Startup
   end
 
   def hire(employee_name, title)
+    raise "title does not exist" if !self.valid_title?(title)
+    @employees << Employee.new(employee_name, title)
+  end
+
+  def size
+    @employees.length
+  end
+
+  def pay_employee(employee)
+    amount = self.salaries[employee.title]
+    raise "not enough funding" if amount > @funding
+
+    employee.pay(amount)
+    @funding -= amount
+  end
+
+  def payday
   end
 end
