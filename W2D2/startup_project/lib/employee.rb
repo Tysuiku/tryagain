@@ -11,3 +11,5 @@ class Employee
     @earnings += amount
   end
 end
+
+#break today
